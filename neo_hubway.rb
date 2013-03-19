@@ -5,11 +5,6 @@ require 'oj'
 
 def stations
   neo = Neography::Rest.new
-  cypher = "START start_stations = node:Station(\"stationId:*\") 
-            MATCH start_stations <-[:`START`]- trips -[:END]-> end_stations
-            RETURN start_stations.name, end_stations.name, COUNT(*) AS cnt
-            ORDER BY cnt DESC
-            LIMIT 200"
             
   cypher = "start from=node:node_auto_index('*:*') 
             match from-[r]->to 
