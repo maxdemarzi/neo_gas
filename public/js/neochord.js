@@ -97,4 +97,4 @@ function draw(paths) {
 
 }
 
-d3.json("/visualization",draw);
+d3.json("/visualization.json",draw);
